@@ -18,7 +18,7 @@ class FirstCest
 
     public function frontpageWorks(AcceptanceTester $I)
     {
-//        $I->amOnPage('/');
-        $I->see("//div/center/[@value='Google Search']");
+        $I->amOnPage('/');
+        $I->see('//div/input[@id="input-4"]');
     }
 }
