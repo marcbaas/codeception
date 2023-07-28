@@ -4,6 +4,7 @@
 namespace Tests\Acceptance;
 
 use Tests\Support\AcceptanceTester;
+use Tests\Support\Page\homepage;
 
 class FirstCest
 {
@@ -19,6 +20,6 @@ class FirstCest
     public function frontpageWorks(AcceptanceTester $I)
     {
         $I->amOnPage('/');
-        $I->see('//div/input[@id="input-4"]');
+        $I->see('Home');
     }
 }
