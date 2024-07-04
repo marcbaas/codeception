@@ -3,11 +3,33 @@
 # Perform tests in a browser by either emulating one using PhpBrowser, or in a real browser using WebDriver.
 # If you need both WebDriver and PhpBrowser tests, create a separate suite for each.
 
+# Directories
+paths:
+    tests  : tests          # where the tests stored
+    data   : tests/Support/Data    # directory for fixture data
+    support: tests/Support # directory for support code
+    output : tests/_output  # directory for output
+    envs   : tests/_envs    # directory for environment configuration
+
+# Modules
 actor: AcceptanceTester
 modules:
     enabled:
+        - WebDriver
+        - Asserts
+
+    config:
+        WebDriver:
+            url: https://www.google.com
+            browser: chrome
+#            capabilities:
+#                goog:chromeOptions:
+#                    args: [ "--headless" ]
+
+    disabled:
         - PhpBrowser:
-            url: http://www.google.com
+              url: https://www.google.com
+
 # Add Codeception\Step\Retry trait to AcceptanceTester to enable retries
 step_decorators:
     - Codeception\Step\ConditionalAssertion
