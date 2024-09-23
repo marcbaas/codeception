@@ -23,7 +23,7 @@ modules:
             url: https://www.google.com
             browser: chrome
 #            capabilities:
-#                goog:chromeOptions:
+#                google:chromeOptions:
 #                    args: [ "--headless" ]
 
     disabled:
