@@ -16,5 +16,6 @@ class FirstCest
     {
         $I->amOnPage('/');
         $I->see('Gmail');
+        $I->wait(500);
     }
 }
