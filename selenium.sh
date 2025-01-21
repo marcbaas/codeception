@@ -1,1 +1,1 @@
-java -jar /c/Users/marcb/bin/selenium-server-4.27.0.jar standalone --port 4444
+java -jar /Users/marcb/bin/selenium-server-4.23.0.jar standalone --port 4444
