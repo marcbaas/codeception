@@ -2,7 +2,22 @@
 
 namespace Support\Page;
 
-class google
+use Codeception\Constraint\Page;
+
+class Google extends \Support\Page\AbstractPage
 {
-    public static $acceptButton = ["name" => "Google", "href" => "https://www.google.com/"];
+    private const ACCEPT_BUTTON = ['href' => 'https://www.google.com/'];
+
+    /**
+     *  clickAcceptButton
+     *  Click the Accept button on the main Google page
+     *
+     * @param string $acceptButton
+     * @return void
+     */
+    public function clickAcceptButton(string $acceptButton = self::ACCEPT_BUTTON): void
+    {
+        $this->webDriver->click($acceptButton);
+    }
+
 }

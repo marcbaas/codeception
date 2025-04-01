@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Tests\Acceptance;
 
 use Tests\Support\AcceptanceTester;
@@ -16,6 +15,6 @@ class FirstCest
     {
         $I->amOnPage('/');
         $I->see('Gmail');
-        $I->wait(500);
+        $I->wait(5);
     }
 }

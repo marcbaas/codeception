@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
 
-# Run Codeception Tests
-php vendor/codeception/codeception/codecept run --steps
+if [ $# -eq 0 ]
+  then
+    echo ""
+    echo "No arguments supplied"
+    echo "Please specify a test to run"
+    echo ""
+  else
+    # Run Codeception Tests
+    php vendor/codeception/codeception/codecept run $1 --steps
+fi
 
-sleep 2
+sleep 1
