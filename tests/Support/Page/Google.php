@@ -2,11 +2,10 @@
 
 namespace Support\Page;
 
-use Codeception\Constraint\Page;
-
 class Google extends \Support\Page\AbstractPage
 {
     private const array ACCEPT_BUTTON = ['href' => 'https://www.google.com/'];
+    private const array ACCEPT_ALL_BUTTON = ['id' => 'L2AGLb'];
 
     /**
      *  clickAcceptButton
@@ -18,6 +17,18 @@ class Google extends \Support\Page\AbstractPage
     public function clickAcceptButton(array $acceptButton = self::ACCEPT_BUTTON): void
     {
         $this->webDriver->click($acceptButton);
+    }
+
+    /**
+     * clickAcceptAllButton
+     * Click the Accept All button on the pane when starting on the google page
+     *
+     * @param array $acceptAllButton
+     * @return void
+     */
+    public function clickAcceptAllButton(array $acceptAllButton = self::ACCEPT_ALL_BUTTON): void
+    {
+        $this->webDriver->click($acceptAllButton);
     }
 
 }

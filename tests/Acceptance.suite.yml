@@ -25,6 +25,7 @@ modules:
 #            capabilities:
 #                google:chromeOptions:
 #                    args: [ "--headless" ]
+            window_size: "maximize"
 
     disabled:
         - PhpBrowser:
