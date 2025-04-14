@@ -8,6 +8,7 @@ printf 'OS detected: ';
 case $( "${UNAME}" | tr '[:upper:]' '[:lower:]') in
   linux*)
     printf 'Linux\n'
+    java -jar /home/"${USERNAME}"/bin/selenium-server-4.31.0.jar standalone --port 4444
     ;;
   darwin*)
     printf 'MacOS\n'
@@ -26,5 +27,3 @@ case $( "${UNAME}" | tr '[:upper:]' '[:lower:]') in
     printf 'This script cannot continue.'
     ;;
 esac
-
-#
